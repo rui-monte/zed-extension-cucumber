@@ -14,5 +14,5 @@ code_action_kinds = ["quickfix"]
 
 [grammars.gherkin]
 repository = "https://github.com/rui-monte/zed-extension-cucumber"
-rev = "6a036141b2768bb2026e9a6ae9a5534ad43cc82e"
+rev = "7b44de0d82684442498c1828780180400e627b00"
 path = "grammar"

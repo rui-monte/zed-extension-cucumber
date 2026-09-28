@@ -1,5 +1,9 @@
 name = "Gherkin"
 grammar = "gherkin"
 path_suffixes = ["feature", "gherkin"]
-line_comments = ["#"]
+line_comments = ["# "]
 tab_size = 2
+brackets = [
+  { start = "\"\"\"", end = "\"\"\"", close = true, newline = true },
+  { start = "```", end = "```", close = true, newline = true },
+]

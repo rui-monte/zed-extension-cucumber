@@ -1,23 +1,26 @@
 [
-  (section_keyword)
-  (step_keywords)
+  (feature_kw)
+  (background_kw)
+  (rule_kw)
+  (scenario_kw)
+  (scenario_outline_kw)
+  (examples_kw)
+  (given_kw)
+  (when_kw)
+  (then_kw)
+  (and_kw)
+  (but_kw)
+  "* "
 ] @keyword
 
-; (title) @string
-
-; (step_definition) @string
-(table_header_name) @attribute
-
 (comment) @comment
-
-(quoted_string) @string
-
-(number) @number
-
-(reference) @constant
-
+(language) @comment
+(language_name) @string
 (tag) @label
-
-(table_cell) @constant
-
-(docstring) @text
+(step_param) @variable
+(table_cell) @string
+(table_head_row (table_col (table_cell) @attribute))
+(doc_string) @string
+(media_type) @type
+[":" "|"] @punctuation.delimiter
+["\"\"\"" "```"] @punctuation.special

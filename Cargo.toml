@@ -1,12 +1,14 @@
 [package]
 name = "zed-extension-cucumber"
-version = "0.0.1"
+version = "0.1.0"
 edition = "2021"
 license = "MIT"
+publish = false
 
 [lib]
 crate-type = ["cdylib"]
 path = "src/lib.rs"
 
 [dependencies]
-zed_extension_api = "0.0.6"
+serde = { version = "1", features = ["derive"] }
+zed_extension_api = "0.7.0"

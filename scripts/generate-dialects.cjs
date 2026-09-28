@@ -64,9 +64,9 @@ for (const language of languages) {
 }
 output.push(render('language', 'Language', languages.map((language, index) => [language, index + 1])));
 output.push(`const Dialect *Dialect_for(LanguageValue language) {\n  switch (language) {\n${languages.map((language, index) => `  case ${index + 1}: return &${identifier(language)};`).join('\n')}\n  default: return &en_dialect;\n  }\n}`);
-output.push('IMPL_ARRAY_TRIE(Dialect, DialectLabel, DialectSize, DialectValue);', 'IMPL_ARRAY_TRIE(Language, LanguageLabel, LanguageSize, LanguageValue);', '');
+output.push('IMPL_ARRAY_TRIE(Dialect, DialectLabel, DialectSize, DialectValue);', 'IMPL_ARRAY_TRIE(Language, LanguageLabel, LanguageSize, LanguageValue);');
 const file = path.resolve(__dirname, '../grammar/src/gherkin/dialect.c');
-const content = output.join('\n\n');
+const content = output.join('\n\n') + '\n';
 if (process.argv.includes('--check')) {
   if (fs.readFileSync(file, 'utf8') !== content) throw new Error('Dialect table is stale. Run node scripts/generate-dialects.cjs');
 } else {

@@ -739,4 +739,3 @@ const Dialect *Dialect_for(LanguageValue language) {
 IMPL_ARRAY_TRIE(Dialect, DialectLabel, DialectSize, DialectValue);
 
 IMPL_ARRAY_TRIE(Language, LanguageLabel, LanguageSize, LanguageValue);
-
